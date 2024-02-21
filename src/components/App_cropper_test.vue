@@ -312,6 +312,39 @@ export default {
 </script>
 
 <style>
+   /* CSS 插入点 */
+
+/* 響應式設計 */
+@media screen and (max-width: 600px) {
+         body {
+             background-color: lightblue;
+         }
+     }
+
+@media screen and (max-width: 768px) {
+  .cut, .c-item, .content {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .test-button {
+    flex-direction: column;
+  }
+
+  .show-info h2 {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .model, .model-show {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
      * {
         margin: 0;
         padding: 0;
