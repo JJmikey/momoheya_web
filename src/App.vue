@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="!showCropper || croppedImage? imgSrc : croppedImage" id="imageToCrop" alt="你的頭像">
+    <img v-if="croppedImage" :src="croppedImage" id="imageToCrop" alt="你的頭像">
     <vue-cropper
       v-if="showCropper"
       ref="cropper"
@@ -9,7 +9,9 @@
         aspectRatio: 1,
         autoCropWidth: 200,
         autoCropHeight: 200,
-        zoomTo: 0.5
+        zoomTo: 0.5,
+        viewMode: 1,  // 使用此選項限制裁剪框不超出畫布
+        background: false  // 使用此選項隱藏背景
       }"
       @crop-end="cropEnd"
       @ready="ready"
